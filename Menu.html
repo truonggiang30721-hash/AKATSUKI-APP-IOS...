@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhân vật</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .character {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .head {
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+            border-radius: 10px;
+            border: 3px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 2px;
+            transition: background-color 0.3s;
+        }
+        .head::after {
+            content: "☠";
+            font-size: 30px;
+            color: black;
+        }
+        .body {
+            width: 40px;
+            height: 50px;
+            background-color: deepskyblue;
+            border-radius: 10px;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .arms {
+            display: flex;
+            gap: 2px;
+        }
+        .arm, .leg {
+            width: 15px;
+            height: 40px;
+            background-color: limegreen;
+            border-radius: 10px;
+            border: 3px solid black;
+        }
+        .legs {
+            display: flex;
+            gap: 2px;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="character">
+        <div class="head" id="head"></div>
+        <div class="arms">
+            <div class="arm"></div>
+            <div class="body"></div>
+            <div class="arm"></div>
+        </div>
+        <div class="legs">
+            <div class="leg"></div>
+            <div class="leg"></div>
+        </div>
+    </div>
+
+    <script>
+        document.body.addEventListener("click", function() {
+            let head = document.getElementById("head");
+            head.style.backgroundColor = (head.style.backgroundColor === "red") ? "yellow" : "red";
+        });
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Config</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #8A2BE2;
+            text-shadow: 2px 2px 5px purple;
+            margin-top: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .btn, .toggle-btn {
+            background: linear-gradient(45deg, red, yellow, green, cyan, blue, magenta);
+            background-size: 400%;
+            color: white;
+            font-size: 18px;
+            padding: 12px 25px;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 200px;
+            text-align: center;
+            animation: rainbow 3s infinite linear;
+            transition: transform 0.2s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+        .btn:hover, .toggle-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px white;
+        }
+
+        @keyframes rainbow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .slider-container {
+            margin-top: 20px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .slider {
+            width: 100%;
+            appearance: none;
+            height: 8px;
+            background: linear-gradient(to right, red, yellow, green, cyan, blue);
+            border-radius: 5px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .slider-value {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .progress-container {
+            width: 300px;
+            background: #222;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+            overflow: hidden;
+            border: 2px solid white;
+        }
+        .progress-bar {
+            width: 0%;
+            height: 15px;
+            background: linear-gradient(90deg, green, cyan, blue, violet);
+            transition: width 0.05s linear;
+        }
+        .progress-text {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .credit {
+    font-size: 16px;
+    color: #FFD700;
+    text-shadow: 0 0 5px #FFD700, 0 0 10px #FF8C00;
+    font-weight: bold;
+    animation: blink 1.5s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+    </style>
+</head>
+    <title>Menu Config</title>
+    <style>
+        @keyframes rainbow {
+            0% { color: red; text-shadow: 0 0 10px red; }
+            14% { color: orange; text-shadow: 0 0 10px orange; }
+            28% { color: yellow; text-shadow: 0 0 10px yellow; }
+            42% { color: green; text-shadow: 0 0 10px green; }
+            57% { color: cyan; text-shadow: 0 0 10px cyan; }
+            71% { color: blue; text-shadow: 0 0 10px blue; }
+            85% { color: violet; text-shadow: 0 0 10px violet; }
+            100% { color: red; text-shadow: 0 0 10px red; }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            animation: rainbow 2s infinite linear;
+        }
+    </style>
+</head>
+<body>
+<h1>Menu Config</h1>
+<p class="credit">Cre:TrGiang
+</p>
+    <div class="btn-container">
+        <button class="btn" id="load-btn">Tải Config</button>
+        <button class="btn" id="save-btn">Lưu Cài Đặt</button>
+        <button class="toggle-btn" id="norecoil-btn">Fix Rung: OFF</button>
+        <button class="toggle-btn" id="aimbot-btn">Aimbot: OFF</button>
+        <button class="toggle-btn" id="aimlock-btn">Aimlock: OFF</button>
+        <button class="toggle-btn" id="overhead-btn">OverHead: OFF</button>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    <div class="progress-text">Đang tải: 0%</div>
+
+    <div class="slider-container">
+        <label>DPI: <span id="dpi-value">Mặc định</span></label>
+        <input type="range" min="100" max="2440" value="100" class="slider" id="dpi-slider">
+    </div>
+
+    <div class="slider-container">
+        <label>FPS: <span id="fps-value">30</span></label>
+        <input type="range" min="30" max="144" value="30" class="slider" id="fps-slider">
+    </div>
+
+    <div class="slider-container">
+        <label>Hz: <span id="hz-value">60</span></label>
+        <input type="range" min="60" max="90" value="60" class="slider" id="hz-slider">
+    </div>
+
+    <div class="slider-container">
+        <label>Cấu hình: <span id="config-value">Thấp</span></label>
+        <input type="range" min="1" max="4" value="1" class="slider" id="config-slider">
+    </div>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar">1%</div>
+    </div>
+    <div id="save-alert" style="
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+        width: 300px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    ">
+        <p>✅ Đã cài đặt xong!</p>
+        <p>🎮 Mời bạn vào game trải nghiệm!</p>
+        <button onclick="closeAlert()" style="
+            background: #8A2BE2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        ">OK</button>
+    </div>
+
+    <script>
+        function startLoading() {
+            let progressBar = document.getElementById("progress-bar");
+            let progressContainer = document.querySelector(".progress-container");
+            progressContainer.style.display = "block";
+            let progress = 1;
+            let interval = setInterval(() => {
+                progress++;
+                progressBar.style.width = progress + "%";
+                progressBar.innerText = progress + "%";
+                progressBar.style.background = `hsl(${progress * 3.6}, 100%, 50%)`;
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    progressBar.innerText = "Hoàn thành!";
+                    progressBar.classList.add("shake");
+                }
+            }, 50);
+        }
+
+        function saveSettings() {
+            document.getElementById("save-alert").style.display = "block";
+        }
+
+        function closeAlert() {
+            document.getElementById("save-alert").style.display = "none";
+        }
+
+        document.getElementById("save-btn").addEventListener("click", saveSettings);
+    </script>
+    <script>
+        function startDownload() {
+            let progressBar = document.querySelector(".progress-bar");
+            let progressContainer = document.querySelector(".progress-container");
+            let progressText = document.querySelector(".progress-text");
+            let progress = 1;
+
+            progressContainer.style.display = "block";
+            progressBar.style.width = "1%";
+            progressText.innerText = "Đang tải: 1%";
+
+            let interval = setInterval(() => {
+                progress += 1; 
+                if (progress > 100) {
+                    progress = 100;
+                    clearInterval(interval);
+                    progressText.innerText = "Tải hoàn tất!";
+                } else {
+                    progressBar.style.width = progress + "%";
+                    progressText.innerText = "Đang tải: " + progress + "%";
+                }
+            }, 50); 
+        }
+
+        document.getElementById("load-btn").addEventListener("click", startDownload);
+
+        function toggleButton(button) {
+            if (button.innerText.includes("OFF")) {
+                button.innerText = button.innerText.replace("OFF", "ON");
+            } else {
+                button.innerText = button.innerText.replace("ON", "OFF");
+            }
+        }
+
+        document.querySelectorAll(".toggle-btn").forEach(button => {
+            button.addEventListener("click", () => toggleButton(button));
+        });
+
+        function updateSliderValue(slider, valueElement, type) {
+            slider.addEventListener("input", function () {
+                if (type === "DPI") {
+                    valueElement.innerText = this.value == 100 ? "Mặc định" : this.value;
+                } else if (type === "FPS" || type === "Hz") {
+                    valueElement.innerText = this.value;
+                } else if (type === "Config") {
+                    const configLevels = ["Thấp", "Tối Ưu", "Cao", "Gaming"];
+                    valueElement.innerText = configLevels[this.value - 1];
+                }
+            });
+        }
+
+        updateSliderValue(document.getElementById("dpi-slider"), document.getElementById("dpi-value"), "DPI");
+        updateSliderValue(document.getElementById("fps-slider"), document.getElementById("fps-value"), "FPS");
+        updateSliderValue(document.getElementById("hz-slider"), document.getElementById("hz-value"), "Hz");
+        updateSliderValue(document.getElementById("config-slider"), document.getElementById("config-value"), "Config");
+    </script>
+</body>
+</html>

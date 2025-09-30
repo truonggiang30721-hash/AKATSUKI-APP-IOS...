@@ -1,0 +1,245 @@
+
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>AKATSUKI BY TRGIANG CRACK</title>
+<meta name="color-scheme" content="dark" />
+<link rel="preload" as="image" href="https://i.postimg.cc/XvT3fFHQ/85-C54337-9753-4-BFB-BF71-57-E7527-F4775.png">
+<style>
+  :root{
+    --bg1:#040a08; --bg2:#030806;
+    --panel:#0a1410; --panel2:#0c1914;
+    --ink:#eafff3; --muted:#bfe9d2;
+    --g1:#00ff88; --g2:#00d06a; --g3:#00b45a;
+    --stroke:rgba(0,255,136,.22);
+    --glass1:rgba(0,255,136,.08); --glass2:rgba(255,255,255,.02);
+    --shadow:0 18px 50px rgba(0,0,0,.6);
+    --rad:24px;
+    --warn:#ffd24d; --err:#ff6b6b; --ok:#00ffa2;
+  }
+  *{box-sizing:border-box} html,body{height:100%}
+  body{
+    margin:0; color:var(--ink);
+    font:15px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial;
+    background:
+      radial-gradient(60vw 40vh at 20% -10%, rgba(0,255,136,.18), transparent 60%),
+      radial-gradient(50vw 40vh at 100% 10%, rgba(0,190,110,.15), transparent 60%),
+      linear-gradient(180deg,var(--bg2),var(--bg1) 35%, #010504);
+    overflow-x:hidden;
+  }
+  #bgCanvas{position:fixed; inset:0; z-index:-1}
+  .screen{max-width:880px; margin:32px auto 120px; padding:0 18px}
+  .head{display:flex; align-items:center; gap:14px; margin-bottom:14px}
+  .avatar{width:74px;height:74px;padding:3px;border-radius:22px;
+    background:conic-gradient(from 0deg,var(--g1),var(--g2),var(--g3),var(--g1));
+    box-shadow:0 18px 40px rgba(0,255,136,.25)}
+  .avatar .inner{width:100%;height:100%;border-radius:19px;background:#03110c;overflow:hidden}
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .brand-title{display:inline-block;font-weight:1000;letter-spacing:.6px;padding:10px 14px 8px;border-radius:14px;
+    background:linear-gradient(180deg,var(--glass1),var(--glass2));border:1px solid var(--stroke);color:#caffea;
+    box-shadow:0 12px 36px rgba(0,255,136,.18);text-shadow:0 0 20px rgba(0,255,136,.25)}
+  .brand-sub{margin-top:6px; color:var(--muted); font-size:12.5px}
+  .brand-sub .sep{opacity:.5; margin:0 6px}
+  .card{position:relative;overflow:hidden;border-radius:var(--rad);
+    background:
+      linear-gradient(180deg,var(--glass1),var(--glass2)),
+      radial-gradient(120% 100% at 0% 0%,rgba(0,255,136,.10),transparent 60%),
+      linear-gradient(180deg,var(--panel2),var(--panel));
+    border:1px solid var(--stroke);box-shadow:var(--shadow),inset 0 0 0 1px rgba(255,255,255,.04);
+    padding:22px; margin-top:10px; transform-style:preserve-3d}
+  .card h3{margin:6px 0; font-size:22px; letter-spacing:.4px}
+  .sub{color:var(--muted); margin-bottom:14px}
+  .field{display:flex; align-items:center; gap:10px; min-height:58px; padding:4px 8px 4px 14px;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));
+    border:1px solid rgba(0,255,136,.18); border-radius:16px; box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
+  .field input{flex:1;border:0;background:transparent;color:var(--ink);font-size:16px;outline:none}
+  .field input::placeholder{color:#cfeede}
+  .iconbtn{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;border:0;cursor:pointer;
+    background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02));color:#fff;
+    box-shadow:inset 0 0 0 1px rgba(0,255,136,.22)}
+  .iconbtn[disabled]{opacity:.6;cursor:not-allowed}
+  .eye{width:22px;height:22px}
+  .metaRow{display:flex;gap:10px;align-items:center;margin-top:8px;flex-wrap:wrap}
+  .caps{display:none;font-size:12.5px;color:var(--warn)} .caps.show{display:inline-flex;gap:6px}
+  .meter{height:6px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);overflow:hidden;flex:1;min-width:160px}
+  .mbar{height:100%;width:0%;background:linear-gradient(90deg,#ff6b6b,#ffd24d,var(--ok));box-shadow:0 0 14px rgba(0,255,136,.35)}
+  .btn{margin-top:14px;width:100%;height:56px;border-radius:16px;border:0;cursor:pointer;
+    font-weight:900;letter-spacing:.5px;color:#00140a;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.05)),linear-gradient(135deg,var(--g1),var(--g2));
+    box-shadow:0 18px 44px rgba(0,255,136,.32),inset 0 0 0 1px rgba(255,255,255,.08)}
+  .btn .bar{position:absolute;left:0;top:0;bottom:0;width:0%;background:rgba(255,255,255,.08)}
+  .status{min-height:22px;margin-top:10px;color:var(--muted);font-size:13px}
+  .glass{margin-top:18px;border-radius:18px;background:linear-gradient(180deg,rgba(0,255,136,.06),rgba(255,255,255,.02));border:1px solid rgba(0,255,136,.16);box-shadow:0 12px 28px rgba(0,0,0,.45);padding:14px 16px}
+  .steps{color:#d6ffea}
+  .legal{margin:18px 0 0;text-align:center;color:var(--muted);font-size:12.5px}
+  .toasts{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:10}
+  .toast{min-width:260px;max-width:360px;padding:12px 14px;border-radius:16px;color:#eafff6;background:linear-gradient(180deg,#07130f,#06100d);
+    border:1px solid rgba(0,255,136,.25);box-shadow:0 20px 44px rgba(0,0,0,.6),0 10px 30px rgba(0,255,136,.18)}
+  .toast .row{display:flex;gap:10px;align-items:flex-start}
+  .toast .ic{width:20px;height:20px;color:#00ffa2}
+</style>
+</head>
+<body>
+<canvas id="bgCanvas" aria-hidden="true"></canvas>
+
+<main class="screen">
+  <header class="head">
+    <div class="avatar"><div class="inner">
+      <img alt="Avatar" src="https://i.postimg.cc/XvT3fFHQ/85-C54337-9753-4-BFB-BF71-57-E7527-F4775.png">
+    </div></div>
+    <div>
+      <div class="brand-title">AKATSUKI MENU</div>
+      <div class="brand-sub">MENU MAKE BY TRGIANG<span class="sep">•</span>  <span class="sep">•</span> </div>
+    </div>
+  </header>
+
+  <section class="card">
+    <h3>Đăng nhập key</h3>
+    <div class="sub">Nhập key đã được cấp để tiếp tục</div>
+
+    <div class="field">
+      <input id="keyInput" type="password" placeholder="Nhập key của bạn" autocomplete="one-time-code" inputmode="text" />
+      <button class="iconbtn" id="btnPaste" title="Dán">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#eafff6"><path d="M19 21H5a2 2 0 0 1-2-2V7h4V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2h4v12a2 2 0 0 1-2 2zM9 5v2h6V5H9z"/></svg>
+      </button>
+      <button class="iconbtn" id="toggleEye" title="Hiện/ẩn">
+        <svg class="eye" viewBox="0 0 24 24" fill="none"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg>
+      </button>
+    </div>
+
+    <div class="metaRow">
+      <span id="capsHint" class="caps">⚠️ Caps Lock đang bật</span>
+      <div class="meter" aria-hidden="true"><div class="mbar" id="mbar"></div></div>
+    </div>
+
+    <button class="btn" id="loginBtn"><span id="btnTxt">Đăng nhập</span><div class="bar" id="btnBar"></div></button>
+    <div class="status"><span id="statusText"></span></div>
+  </section>
+
+  <section class="glass">
+    <h4>Ghi chú</h4>
+    <div class="steps">
+      Không chia sẻ key. Hệ thống sẽ khoá khi phát hiện sử dụng bất thường hoặc phát tán công khai.<br>
+      • <b> Chạm giữ vào ô nhập để dán key từ clipboard. </b>
+      <br>
+    </div>
+  </section>
+
+  <div class="legal">Bằng việc đăng nhập bạn đồng ý với <b>Điều khoản</b> & <b>Chính sách bảo mật</b>.</div>
+</main>
+
+<div class="toasts" aria-live="polite" aria-atomic="true"></div>
+
+<!-- Tải danh sách key -->
+<script src="keys.js"></script>
+
+<script>
+/* ===== Helpers ===== */
+const $ = s => document.querySelector(s);
+const toastBox = $('.toasts');
+function toast(msg){ const el=document.createElement('div'); el.className='toast'; el.innerHTML =
+  '<div class="row"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg><div>'+msg+'</div></div>';
+  toastBox.appendChild(el); setTimeout(()=> el.remove(), 2500);
+}
+function vibrate(ms){ if(navigator.vibrate) try{navigator.vibrate(ms||30);}catch{} }
+
+/* ===== BG Dots ===== */
+const bg = $('#bgCanvas'), bx = bg.getContext('2d');
+function rs(){ bg.width=innerWidth; bg.height=innerHeight } addEventListener('resize', rs, {passive:true}); rs();
+const dots = Array.from({length: 90}).map(()=>({x:Math.random()*bg.width,y:Math.random()*bg.height,r:Math.random()*1.8+.4,vx:(Math.random()*2-1)*.15,vy:(Math.random()*2-1)*.15,c:Math.random()<.5?'rgba(0,255,136,.75)':'rgba(0,210,120,.65)'}));
+(function draw(){ bx.clearRect(0,0,bg.width,bg.height); for(const d of dots){ d.x+=d.vx; d.y+=d.vy; if(d.x<0||d.x>bg.width) d.vx*=-1; if(d.y<0||d.y>bg.height) d.vy*=-1; bx.beginPath(); bx.arc(d.x,d.y,d.r,0,Math.PI*2); bx.fillStyle=d.c; bx.fill(); } requestAnimationFrame(draw); })();
+
+/* ===== keys.js helpers ===== */
+function getStore(){ return (window.UCHIHA_KEYS && typeof window.UCHIHA_KEYS==='object') ? window.UCHIHA_KEYS : {}; }
+async function sha256Hex(t){ const enc=new TextEncoder().encode(t); const buf=await crypto.subtle.digest('SHA-256',enc); return [...new Uint8Array(buf)].map(b=>b.toString(16).padStart(2,'0')).join(''); }
+async function resolveKey(key){
+  const store=getStore();
+  if(store[key]) return {id:key, meta:store[key]};
+  const dig='sha256:'+await sha256Hex(key);
+  if(store[dig]) return {id:dig, meta:store[dig]};
+  return null;
+}
+function addMonths(date, m){ const d=new Date(date); const day=d.getDate(); d.setMonth(d.getMonth()+m); if(d.getDate()<day){ d.setDate(0); } return d; }
+function calcExpiry(meta, firstActivatedAt){
+  if(meta.exp) return new Date(meta.exp);
+  if(meta.plan?.days){ const base=new Date(firstActivatedAt); base.setDate(base.getDate()+Number(meta.plan.days||0)); return base; }
+  if(meta.plan?.months){ return addMonths(firstActivatedAt, Number(meta.plan.months||0)); }
+  return new Date('9999-12-31T23:59:59Z'); // vô hạn (demo)
+}
+
+/* ===== UI refs ===== */
+const keyInput=$('#keyInput'), loginBtn=$('#loginBtn'), btnTxt=$('#btnTxt'), btnBar=$('#btnBar'), statusText=$('#statusText'), mbar=$('#mbar'), capsHint=$('#capsHint');
+
+/* Strength + Caps */
+function updateCapsHint(e){ const on=e.getModifierState && e.getModifierState('CapsLock'); capsHint.classList.toggle('show', !!on); }
+keyInput.addEventListener('keydown', updateCapsHint); keyInput.addEventListener('keyup', updateCapsHint);
+keyInput.addEventListener('input', ()=>{ const v=keyInput.value; const len=v.length; const variety=(/[a-z]/.test(v))+(/[A-Z]/.test(v))+(/[0-9]/.test(v))+(/[^A-Za-z0-9]/.test(v)); mbar.style.width=Math.min(100, len*5+variety*15)+'%'; });
+
+/* Paste + Eye */
+$('#btnPaste').addEventListener('click', async ()=>{
+  try{ const t=await navigator.clipboard.readText(); keyInput.value=t.trim(); keyInput.dispatchEvent(new Event('input')); toast('Đã dán key'); }catch{ toast('Clipboard bị chặn, dán thủ công nhé'); }
+});
+const toggleEye=$('#toggleEye'); function showKey(b){ keyInput.type=b?'text':'password'; }
+toggleEye.addEventListener('click', ()=> showKey(keyInput.type==='password'));
+
+/* ===== LOGIN (keys.js only) ===== */
+let working=false;
+async function doLogin(){
+  if(working) return;
+  const key = keyInput.value.trim();
+  if(!key){ toast('Nhập key trước'); keyInput.focus(); vibrate(60); return; }
+
+  working=true; loginBtn.setAttribute('disabled',''); statusText.textContent='Đang xác thực…';
+  btnBar.style.width='0%'; let p=0; const t=setInterval(()=>{ p=Math.min(100,p+Math.random()*16+10); btnBar.style.width=p+'%'; },120);
+
+  try{
+    const hit = await resolveKey(key);
+    if(!hit){ throw new Error('Key không hợp lệ. Hãy nhập lại'); }
+
+    // Mốc kích hoạt đầu tiên theo ID key
+    const ACT_KEY='uchiha_activated_at_'+hit.id;
+    let first = localStorage.getItem(ACT_KEY);
+    if(!first){ first = new Date().toISOString(); localStorage.setItem(ACT_KEY, first); }
+
+    // Tính hạn (nếu có)
+    const exp = calcExpiry(hit.meta, new Date(first)).getTime();
+    if(exp && Date.now()>exp){ throw new Error('Key đã hết hạn. Vui lòng gia hạn'); }
+
+    // ✔️ Chỉ lưu SESSION token (không lưu token ở localStorage)
+    sessionStorage.setItem('auth_token','1');
+    localStorage.setItem('uchiha_key_expires', String(exp||0)); // chỉ để menu biết còn hạn
+    if(hit.meta.note) localStorage.setItem('uchiha_key_note', hit.meta.note);
+
+    clearInterval(t); btnBar.style.width='100%'; statusText.textContent='Đăng nhập thành công! Đang chuyển…';
+    setTimeout(()=> location.href='menu.html', 400);
+  }catch(e){
+    clearInterval(t); btnBar.style.width='0%'; statusText.textContent=e.message||'Đăng nhập thất bại';
+    // ép nhập lại: xoá input, focus
+    keyInput.value=''; keyInput.focus(); keyInput.dispatchEvent(new Event('input'));
+    vibrate(80); toast(statusText.textContent);
+  }finally{
+    working=false; loginBtn.removeAttribute('disabled');
+  }
+}
+loginBtn.addEventListener('click', doLogin);
+keyInput.addEventListener('keydown', e=>{ if(e.key==='Enter') doLogin(); });
+
+/* ===== Auto restore (chỉ khi còn SESSION) ===== */
+(function(){
+  const ok = sessionStorage.getItem('auth_token')==='1';
+  const expMs = +(localStorage.getItem('uchiha_key_expires')||0);
+  if(ok && (!expMs || Date.now()<expMs)){ location.href='menu.html'; }
+})();
+
+/* Tilt nhẹ */
+const card=document.querySelector('.card');
+card.addEventListener('pointermove', e=>{
+  const r=card.getBoundingClientRect(), x=(e.clientX-(r.left+r.width/2))/(r.width/2), y=(e.clientY-(r.top+r.height/2))/(r.height/2);
+  card.style.transform=`rotateY(${x*6}deg) rotateX(${-y*6}deg)`;
+},{passive:true});
+card.addEventListener('pointerleave', ()=> card.style.transform='');
+</script>
+</body>
+</html>
